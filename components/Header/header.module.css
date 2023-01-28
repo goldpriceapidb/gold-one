@@ -1,0 +1,44 @@
+.headerWrapper {
+	display: flex;
+    align-items: center;
+	justify-content: flex-end;
+	position: relative;
+	background-color: #0d0d11;
+	color: #ffffff;
+    font-family: "Bahnschrift";
+    height: 20vh;
+}
+
+.headerWrapper * {
+    margin-right: 15px;
+    margin-top: 23px;
+}
+
+.logoContainer {
+    position: absolute;
+    left: 60px;
+    top: -15px;
+}
+
+.logoContainer img {
+    border-radius: 15%;
+}
+
+.circularText {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hyphens {
+    font-size: 9px;
+    border-bottom: 1px solid #595959;
+    margin-top: -3px;
+}
