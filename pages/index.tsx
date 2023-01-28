@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Header from "../components/Header"
+import Start from "./Start"
 
 function IndexPage(): JSX.Element {
 	return (
@@ -11,8 +11,9 @@ function IndexPage(): JSX.Element {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 			</Head>
+
+			<Start />
 			
-			<Header />
 
 			<style global jsx>{`
 				@font-face {
