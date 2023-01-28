@@ -7,6 +7,19 @@ function StartPage(): JSX.Element {
 		<>
 			<Header />
 
+			<div className="heroSlider">
+				<img
+					className={styles.heroSlider}
+					src="/hero/mainSlider.webp"
+					alt="Made with attention to every detail & carefully finished by hand."
+					width={1024}
+				/>
+			</div>
+
+			<div className={styles.quoteContainer}>
+				<span className={styles.quoteSpan}>{quote.verse}</span>
+				<span className={styles.quoteSpan}>{"- "}{quote.saidBy}</span>
+			</div>
 		</>
 	)
 }
