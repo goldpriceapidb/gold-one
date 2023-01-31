@@ -9,6 +9,34 @@ export default function LiveSpotPrice(): JSX.Element {
 	return (
 		<>
 
+function PuritySelectOption(props: KaratSelect): JSX.Element {
+	let handleChange = async (
+		e: ChangeEvent<HTMLSelectElement>
+	): Promise<void> => {
+		props.setKarat(e.target.value)
+	}
+
+	return (
+		<>
+			<select
+				className={styles.puritySelect}
+				title="Select Purity"
+				onChange={handleChange}
+				name="Select Purity"
+				defaultValue="24"
+			>
+				<option value="24">24 Karat</option>
+				<option value="22">22 Karat</option>
+				<option value="21">21 Karat</option>
+				<option value="18">18 Karat</option>
+				<option value="14">14 Karat</option>
+				<option value="10">10 Karat</option>
+				<option value="6">6 Karat</option>
+			</select>
+		</>
+	)
+}
+
 function CountryOption(props: CountryType): JSX.Element {
 	return (
 		<>
