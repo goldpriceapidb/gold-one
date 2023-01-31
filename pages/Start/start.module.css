@@ -7,17 +7,17 @@
 }
 
 .quoteContainer {
-    background-color: #0c0c0c;
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 4rem;
+	background-color: #0c0c0c;
+	width: 100%;
+	height: 15vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 4rem;
 }
 
 .quoteSpan {
-    margin-top: 0.5rem;
-    color: #8e8e8e;
+	margin-top: 0.5rem;
+	color: #8e8e8e;
 }
