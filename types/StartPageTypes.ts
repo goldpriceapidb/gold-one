@@ -13,14 +13,10 @@ export interface CountryType {
 
 export interface CountrySelect {
 	setCountryCode: Dispatch<SetStateAction<string>>
-    selectedKarat: string
-    setRate: Dispatch<SetStateAction<number>>
 }
 
 export interface KaratSelect {
     setKarat: Dispatch<SetStateAction<string>>
-    setRate: Dispatch<SetStateAction<number>>
-    selectedCountry: string
 }
 
 export interface Country {
