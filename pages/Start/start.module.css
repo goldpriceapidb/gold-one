@@ -21,3 +21,82 @@
 	margin-top: 0.5rem;
 	color: #8e8e8e;
 }
+
+.wrapper {
+    max-width: -moz-fit-content;
+	max-width: fit-content;
+    padding: 1rem;
+}
+
+.headingTitle {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    width: 100%;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.formContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: -moz-fit-content;
+	max-width: fit-content;
+	border: 1px solid #ddc260;
+	border-radius: 12px;
+	padding: 2rem;
+}
+
+.countrySelect,
+.puritySelect {
+	width: 100%;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	background-color: #0c0c0c;
+	color: #ffffff;
+	text-align: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	padding: 0.5em 1em;
+	width: 100%;
+	outline: none;
+	border-radius: 23px;
+	background-image: url(/icons/countryDown.svg);
+	background-position: right 4px bottom 0px;
+	background-repeat: no-repeat;
+	background-size: 50px;
+}
+
+.countrySelect option:hover,
+.countrySelect option:focus,
+.countrySelect option:active,
+.puritySelect option:hover,
+.puritySelect option:focus,
+.puritySelect option:active {
+	background: linear-gradient(#000000, #000000);
+	background-color: #000000 !important;
+	color: #ffed00 !important;
+}
+
+.countrySelect option:checked,
+.puritySelect option:checked {
+	background: linear-gradient(#d6d6d6, #d6d6d6);
+	background-color: #d6d6d6 !important;
+	color: #000000 !important;
+}
+
+.value {
+	font-size: 3.5rem;
+	width: 100%;
+	background-color: #0c0c0c;
+	text-align: center;
+	color: white;
+	padding: 0.9rem 0.2rem;
+	margin: 0;
+	border-radius: 23px;
+	margin-top: 0.6rem;
+}

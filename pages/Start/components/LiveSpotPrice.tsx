@@ -1,3 +1,6 @@
+import styles from "../start.module.css"
+import { countries } from "../data"
+import { ChangeEvent, useEffect, useState } from "react"
 import {
 	CountryType,
 	CountrySelect,
@@ -6,8 +9,44 @@ import {
 	RenderValue,
 } from "../../../types/StartPageTypes"
 import { get, set } from "idb-keyval"
+
 const API_ENDPOINT: string = "https://gold-price.hop.sh/api"
+
 export default function LiveSpotPrice(): JSX.Element {
+	let [countryCode, setCountryCode] = useState("india")
+	let [karat, setKarat] = useState("24")
+	let [rate, setRate] = useState(0)
+	let [currencySymbol, setCurrencySymbol] = useState("₹")
+
+	useEffect(() => {
+		async function main(): Promise<void> {
+			let data = await getData()
+			await addToIDBStorage(data)
+			console.log("Downloaded content")
+		}
+		main()
+	}, [])
+
+	useEffect(() => {
+		updateValues({ countryCode, karat, setRate, setCurrencySymbol })
+	}, [countryCode, karat])
+
+	return (
+		<>
+			<div className={styles.wrapper}>
+				<span className={styles.headingTitle}>Live Spot Price</span>
+
+				<div className={styles.formContainer}>
+					<CountrySelectOption setCountryCode={setCountryCode} />
+					<PuritySelectOption setKarat={setKarat} />
+					<p className={styles.value}>
+						{rate} {currencySymbol}
+					</p>
+				</div>
+			</div>
+		</>
+	)
+}
 
 function CountrySelectOption(props: CountrySelect): JSX.Element {
 	let handleChange = async (

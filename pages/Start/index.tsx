@@ -1,6 +1,7 @@
 import Header from "../../components/Header"
 import HeroSlider from "./components/HeroSlider"
 import Quote from "./components/Quote"
+import LiveSpotPrice from "./components/LiveSpotPrice"
 
 function StartPage(): JSX.Element {
 	return (
@@ -10,10 +11,7 @@ function StartPage(): JSX.Element {
 			<HeroSlider />
 			<Quote />
 
-			<div className={styles.quoteContainer}>
-				<span className={styles.quoteSpan}>{quote.verse}</span>
-				<span className={styles.quoteSpan}>{"- "}{quote.saidBy}</span>
-			</div>
+			<LiveSpotPrice />
 		</>
 	)
 }
