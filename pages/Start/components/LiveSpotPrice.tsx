@@ -5,9 +5,40 @@ import {
 	Country,
 	RenderValue,
 } from "../../../types/StartPageTypes"
+import { get, set } from "idb-keyval"
+const API_ENDPOINT: string = "https://gold-price.hop.sh/api"
 export default function LiveSpotPrice(): JSX.Element {
+
+function CountrySelectOption(props: CountrySelect): JSX.Element {
+	let handleChange = async (
+		e: ChangeEvent<HTMLSelectElement>
+	): Promise<void> => {
+		props.setCountryCode(e.target.value)
+	}
+
 	return (
 		<>
+			<select
+				className={styles.countrySelect}
+				title="Select Country Name"
+				onChange={handleChange}
+				name="Select Country Name"
+				defaultValue="india"
+			>
+				{countries.map((country: CountryType) => {
+					const { countryCode, countryName, key } = country
+					return (
+						<CountryOption
+							countryCode={countryCode}
+							countryName={countryName}
+							key={key}
+						/>
+					)
+				})}
+			</select>
+		</>
+	)
+}
 
 function PuritySelectOption(props: KaratSelect): JSX.Element {
 	let handleChange = async (
