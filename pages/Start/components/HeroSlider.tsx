@@ -1,4 +1,4 @@
-import styles from "./start.module.css"
+import styles from "../start.module.css"
 
 export default function HeroSlider(): JSX.Element {
     return (
