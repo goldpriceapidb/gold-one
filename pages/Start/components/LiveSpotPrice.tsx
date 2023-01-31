@@ -14,3 +14,9 @@ async function getCountryData(countryCode: string): Promise<Country> {
 	)
 	return countryData[0]
 }
+
+async function getData(): Promise<Country[]> {
+	let response = await fetch(`${API_ENDPOINT}/country/all`)
+	let data = await response.json()
+	return data
+}
