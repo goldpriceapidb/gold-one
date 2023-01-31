@@ -39,3 +39,10 @@ export interface Country {
 	priceChange: number
 	priceChangePercentage: number
 }
+
+export interface RenderValue {
+	setCurrencySymbol: Dispatch<SetStateAction<string>>
+	setRate: Dispatch<SetStateAction<number>>
+	countryCode: string
+	karat: string
+}
