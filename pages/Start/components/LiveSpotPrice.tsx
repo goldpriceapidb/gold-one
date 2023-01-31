@@ -20,3 +20,8 @@ async function getData(): Promise<Country[]> {
 	let data = await response.json()
 	return data
 }
+
+async function addToIDBStorage(data: Country[]): Promise<void> {
+	await set("countries", data)
+	return
+}
