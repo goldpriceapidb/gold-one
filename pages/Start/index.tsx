@@ -1,20 +1,12 @@
 import Header from "../../components/Header"
-import styles from "./start.module.css"
-import { quote } from "./data"
+import HeroSlider from "./components/HeroSlider"
 
 function StartPage(): JSX.Element {
 	return (
 		<>
 			<Header />
 
-			<div className="heroSlider">
-				<img
-					className={styles.heroSlider}
-					src="/hero/mainSlider.webp"
-					alt="Made with attention to every detail & carefully finished by hand."
-					width={1024}
-				/>
-			</div>
+			<HeroSlider />
 
 			<div className={styles.quoteContainer}>
 				<span className={styles.quoteSpan}>{quote.verse}</span>
