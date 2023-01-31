@@ -8,6 +8,13 @@ import {
 export default function LiveSpotPrice(): JSX.Element {
 	return (
 		<>
+
+function CountryOption(props: CountryType): JSX.Element {
+	return (
+		<>
+			<option value={props.countryCode}>
+				{props.countryName.toLocaleUpperCase()}
+			</option>
 		</>
 	)
 }
