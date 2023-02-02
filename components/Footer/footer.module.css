@@ -1,0 +1,25 @@
+.footerContainer{
+ width: 90%;
+ border-top: 1px solid #cfab48;
+ padding: 2rem 0;
+ margin: auto;
+ padding-top:6vh;
+ margin-bottom: 4vh;
+ display: flex;
+ justify-content: space-between;
+
+}
+
+.builtBy{
+    color:white;
+    font-size: 1rem;
+    font-family: "Bahnschrift";
+}
+
+.copyRight{
+    color:white;
+    font-size: 1rem;
+    font-family: "Bahnschrift";
+    float: right;
+    text-align: right;
+}
