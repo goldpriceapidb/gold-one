@@ -1,7 +1,7 @@
 import Head from "next/head"
-import Start from "./Start"
+import Process from "./Process"
 
-function IndexPage(): JSX.Element {
+function ProcessPage(): JSX.Element {
 	return (
 		<>
 			<Head>
@@ -12,7 +12,7 @@ function IndexPage(): JSX.Element {
 				<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 			</Head>
 
-			<Start />
+			<Process />
 
 
 			<style global jsx>{`
@@ -48,4 +48,4 @@ function IndexPage(): JSX.Element {
 	)
 }
 
-export default IndexPage
+export default ProcessPage
