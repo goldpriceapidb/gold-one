@@ -1,0 +1,11 @@
+.lineContainer{
+    margin: 8vw 25vw;
+    margin-bottom: 30vh;
+}
+.line{
+    color:white;
+    font-family: "Bahnschrift";
+    font-size: 1.5rem;
+    margin-bottom: 4vh;
+    text-align: justify;
+}
