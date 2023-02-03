@@ -44,4 +44,15 @@ let paragraphContentCol2 = [
     }
 ]
 
+function Data(): JSX.Element {
+    return (
+        <>
+
+        </>
+
+    )
+}
+
+export default Data
+
 export { paragraphContentCol1, paragraphContentCol2 }

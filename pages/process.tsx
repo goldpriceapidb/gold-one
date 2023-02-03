@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Process from "./Process"
+import Process from "./ProcessPage"
 
 function ProcessPage(): JSX.Element {
 	return (
