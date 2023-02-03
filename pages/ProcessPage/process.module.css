@@ -22,3 +22,13 @@
     font-size: 1.2rem;
     font-family: "Bahnschrift";
 }
+
+.paraTitleContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.goldenLine{
+    border-top: 2px solid #cfab48;
+    width: 100%;
+}
