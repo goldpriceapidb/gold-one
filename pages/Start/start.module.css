@@ -23,9 +23,10 @@
 }
 
 .wrapper {
-    max-width: -moz-fit-content;
-	max-width: fit-content;
+    /* max-width: -moz-fit-content; */
+	/* max-width: fit-content; */
     padding: 1rem;
+	width: 100%;
 }
 
 .headingTitle {
@@ -47,6 +48,7 @@
 	border: 1px solid #ddc260;
 	border-radius: 12px;
 	padding: 2rem;
+	/* width: 100%; */
 }
 
 .countrySelect,
@@ -100,3 +102,12 @@
 	border-radius: 23px;
 	margin-top: 0.6rem;
 }
+
+
+.gridChoosePrice{
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+	margin:0 15vw;
+	grid-gap: 4vw;
+}
+

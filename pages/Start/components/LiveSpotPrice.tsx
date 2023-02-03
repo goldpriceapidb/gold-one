@@ -34,7 +34,7 @@ export default function LiveSpotPrice(): JSX.Element {
 	return (
 		<>
 			<div className={styles.wrapper}>
-				<span className={styles.headingTitle}>Live Spot Price</span>
+				<span className={styles.headingTitle}>LIVE SPOT PRICE</span>
 
 				<div className={styles.formContainer}>
 					<CountrySelectOption setCountryCode={setCountryCode} />
@@ -146,11 +146,11 @@ async function updateValues({
 }: RenderValue): Promise<void> {
 	let countryData = await getCountryData(countryCode)
 	setCurrencySymbol(countryData.currencySymbol)
-	
+
 	let DEFAULT_KARAT = 24
 	let rate = countryData.currentPrice / DEFAULT_KARAT
 	rate = rate * parseInt(selectedKarat)
-	
+
 	let rateString = rate.toFixed(2)
 	rate = parseFloat(rateString)
 	setRate(rate)

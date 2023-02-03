@@ -3,7 +3,7 @@ import HeroSlider from "./components/HeroSlider"
 import Quote from "./components/Quote"
 import LiveSpotPrice from "./components/LiveSpotPrice"
 import WhyChooseUs from "./components/WhyChoose"
-
+import style from "./start.module.css"
 function StartPage(): JSX.Element {
 	return (
 		<>
@@ -11,9 +11,10 @@ function StartPage(): JSX.Element {
 
 			<HeroSlider />
 			<Quote />
-
-			<LiveSpotPrice />
-			<WhyChooseUs />
+			<div className={style.gridChoosePrice}>
+				<LiveSpotPrice />
+				<WhyChooseUs />
+			</div>
 		</>
 	)
 }
