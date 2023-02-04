@@ -4,6 +4,7 @@ import Quote from "./components/Quote"
 import LiveSpotPrice from "./components/LiveSpotPrice"
 import WhyChooseUs from "./components/WhyChoose"
 import VideoComponent from "./components/VideoComponent"
+import PageBreak from "../../components/PageBreak"
 import style from "./start.module.css"
 function StartPage(): JSX.Element {
 	return (
