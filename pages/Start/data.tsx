@@ -265,7 +265,7 @@ let countries: CountryType[] = [
 let whyChooseUsIcons: Icons[] = [
 
 	{
-		text: "NABL Certified Lab",
+		text: "NABL &emsp; &emsp; Certified Lab",
 		iconSrc: "/whyChoose/1.webp",
 		key: "5b71a980-2658-4b8b-afb4-1dcfdbc8eaff"
 	},
