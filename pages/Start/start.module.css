@@ -1,7 +1,13 @@
 .heroSlider {
 	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	height: auto;
 }
@@ -10,9 +16,18 @@
 	background-color: #0c0c0c;
 	width: 100%;
 	height: 15vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	margin-bottom: 4rem;
 }
@@ -23,32 +38,39 @@
 }
 
 .wrapper {
-    /* max-width: -moz-fit-content; */
-	/* max-width: fit-content; */
-    padding: 1rem;
+	padding: 1rem;
 	width: 100%;
 }
 
 .headingTitle {
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-    width: 100%;
-    display: block;
-    margin-bottom: 3rem;
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+	width: 100%;
+	display: block;
+	margin-bottom: 3rem;
 }
 
 .formContainer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	max-width: -moz-fit-content;
+	max-width: -webkit-fit-content;
 	max-width: fit-content;
 	border: 1px solid #ddc260;
-	border-radius: 12px;
+	border-radius: 35px;
 	padding: 2rem;
-	/* width: 100%; */
 }
 
 .countrySelect,
@@ -79,6 +101,14 @@
 .puritySelect option:hover,
 .puritySelect option:focus,
 .puritySelect option:active {
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#000000),
+		to(#000000)
+	);
+	background: -o-linear-gradient(#000000, #000000);
 	background: linear-gradient(#000000, #000000);
 	background-color: #000000 !important;
 	color: #ffed00 !important;
@@ -86,6 +116,14 @@
 
 .countrySelect option:checked,
 .puritySelect option:checked {
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#d6d6d6),
+		to(#d6d6d6)
+	);
+	background: -o-linear-gradient(#d6d6d6, #d6d6d6);
 	background: linear-gradient(#d6d6d6, #d6d6d6);
 	background-color: #d6d6d6 !important;
 	color: #000000 !important;
@@ -103,11 +141,12 @@
 	margin-top: 0.6rem;
 }
 
-
-.gridChoosePrice{
+.gridChoosePrice {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 2fr 4vw 4fr;
 	grid-template-columns: 2fr 4fr;
-	margin:0 15vw;
+	margin: 0 10vw;
 	grid-gap: 4vw;
 }
 
