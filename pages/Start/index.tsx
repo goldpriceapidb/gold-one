@@ -17,6 +17,7 @@ function StartPage(): JSX.Element {
 				<WhyChooseUs />
 			</div>
 			<VideoComponent />
+			<PageBreak />
 		</>
 	)
 }
