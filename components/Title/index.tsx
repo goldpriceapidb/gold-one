@@ -1,8 +1,5 @@
 import styles from "./title.module.css"
-
-interface TitleProps {
-    pageTitle: string
-}
+import { TitleProps } from "../../types/GlobalTypes"
 
 export default function Title(prop: TitleProps): JSX.Element {
     return (
