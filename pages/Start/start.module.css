@@ -111,3 +111,44 @@
 	grid-gap: 4vw;
 }
 
+.iconsContainer {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1.5rem 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1.5rem;
+	max-width: -moz-fit-content;
+	max-width: -webkit-fit-content;
+	max-width: fit-content;
+	border: 1px solid #ddc260;
+	border-radius: 65px;
+	padding: 3rem 2.5rem;
+}
+
+.iconDiv {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-bottom: 3rem;
+}
+
+.iconDiv span {
+	font-size: 2rem;
+	color: #ffffff;
+	max-width: 14ch;
+	margin-left: 1rem;
+}
+
+.iconDiv:nth-child(2) span {
+	max-width: 15ch;
+}
+
+.iconDiv:nth-last-child(-n + 2) {
+	margin-bottom: 0;
+}
