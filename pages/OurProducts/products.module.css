@@ -1,3 +1,15 @@
+.productsContainer {
+	margin-bottom: 10rem;
+}
+
+.partTitle {
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+	width: 100%;
+	display: block;
+	margin-bottom: 3rem;
+}
 
 .goldTypeHolder {
 	display: flex;
