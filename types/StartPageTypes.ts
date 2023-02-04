@@ -42,3 +42,9 @@ export interface RenderValue {
 	countryCode: string
 	karat: string
 }
+
+export interface Icons {
+	text: string
+	iconSrc: string
+	key: string
+}
