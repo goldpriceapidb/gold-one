@@ -1,6 +1,10 @@
 .lineContainer{
     margin: 8vw 25vw;
     margin-bottom: 30vh;
+    z-index: 20;
+}
+.circularText{
+    
 }
 .line{
     color:white;
