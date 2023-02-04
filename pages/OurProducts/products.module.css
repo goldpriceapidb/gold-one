@@ -1,0 +1,33 @@
+
+.goldTypeHolder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.goldTypeContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.goldTypeContainer:not(:last-child) {
+	margin-right: 3rem;
+}
+
+.goldType {
+	text-align: center;
+	font-weight: 100;
+	font-size: 9rem;
+	color: white;
+	display: block;
+}
+
+.separatorHyphen {
+	display: block;
+	width: 7ch;
+	height: 1px;
+	background-color: #ddc260;
+	margin: 0 0.5rem;
+}
+
