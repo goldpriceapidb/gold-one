@@ -1,8 +1,34 @@
+import { useState } from "react"
 import styles from "../start.module.css"
 
 export default function VideoComponent(): JSX.Element {
 	return (
 		<>
+			<div className={styles.videoWrapper}>
+                <Video />
+            </div>
+		</>
+	)
+}
+
+function Video(): JSX.Element {
+	const [showVideo, setShowVideo] = useState(false)
+	const [showButton, setShowButton] = useState(true)
+
+	let handleClick = () => {
+		setShowVideo(!showVideo)
+		setShowButton(!showButton)
+	}
+
+	return (
+		<>
+			{showButton && (
+				<div onClick={handleClick} className={styles.videoOverlay}>
+					<ImageOverlay />
+				</div>
+			)}
+
+			{showVideo && <YoutubeIframe />}
 		</>
 	)
 }

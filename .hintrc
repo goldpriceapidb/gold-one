@@ -9,6 +9,14 @@
       {
         "select-name": "off"
       }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[allow]"
+        ]
+      }
     ]
   }
 }

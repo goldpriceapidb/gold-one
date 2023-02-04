@@ -198,3 +198,33 @@
 .iconDiv:nth-last-child(-n + 2) {
 	margin-bottom: 0;
 }
+
+.videoWrapper {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoOverlay {
+	position: relative;
+}
+
+.video {
+	border-radius: 12px;
+}
+
+.videoOverlay img {
+	opacity: 0.5;
+	border-radius: 12px;
+}
+
+.playButton {
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
