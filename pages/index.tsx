@@ -36,6 +36,7 @@ function IndexPage(): JSX.Element {
 						BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
 						Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 					font-weight: 400;
+					scroll-behavior: smooth;
 				}
 
 				body {
