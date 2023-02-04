@@ -3,6 +3,7 @@ import HeroSlider from "./components/HeroSlider"
 import Quote from "./components/Quote"
 import LiveSpotPrice from "./components/LiveSpotPrice"
 import WhyChooseUs from "./components/WhyChoose"
+import VideoComponent from "./components/VideoComponent"
 import style from "./start.module.css"
 function StartPage(): JSX.Element {
 	return (
@@ -15,6 +16,7 @@ function StartPage(): JSX.Element {
 				<LiveSpotPrice />
 				<WhyChooseUs />
 			</div>
+			<VideoComponent />
 		</>
 	)
 }
