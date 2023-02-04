@@ -1,0 +1,38 @@
+
+.contactFlex{
+    display:flex; 
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+    height: 10vh;
+}
+
+.twoRowDivs{
+    font-family: "Bahnschrift";
+    color:white;
+    font-size: 2rem;
+    margin:0 2vw;
+    align-items: center;
+    margin: auto 1vw;
+}
+.iconFlexDiv{
+    display:flex;
+    font-family: "Bahnschrift";
+    color:white;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.icon{
+    height:1.2rem;
+}
+.phoneIcon{
+    width: 4rem;
+    height: auto;
+}
+
+.phoneNo{
+    font-family: "Bahnschrift";
+    color:white;
+    font-size: 2.4rem;
+}

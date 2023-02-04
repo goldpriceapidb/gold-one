@@ -17,7 +17,7 @@ let headerContents: NavHeadingContent[] = [
 	},
 	{
 		label: "OUR PROCESS",
-		route: "/our-process",
+		route: "/process",
 		key: "fa176ba7-d0e0-47e3-bd12-703fb3d52ea4"
 	},
 	{
@@ -27,12 +27,12 @@ let headerContents: NavHeadingContent[] = [
 	},
 	{
 		label: "ABOUT US",
-		route: "about-us",
+		route: "about",
 		key: "50aa82eb-226e-464a-a4f2-e3d63fb87a77"
 	},
 	{
 		label: "CONTACT US",
-		route: "/contact-us",
+		route: "/contact",
 		key: "a5e6bfa3-35fe-490c-8ade-c400cf3ad913"
 	},
 	{
@@ -42,7 +42,7 @@ let headerContents: NavHeadingContent[] = [
 	},
 	{
 		label: "ENQUIRIES",
-		route: "/enquiries",
+		route: "/enquiry",
 		key: "e39b1cd0-dcf0-42df-8d1a-ee7b67df08ff"
 	},
 ]

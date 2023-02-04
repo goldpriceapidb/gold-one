@@ -1,3 +1,5 @@
+
+
 .headerWrapper {
 	display: flex;
     align-items: center;
@@ -35,6 +37,8 @@
     align-items: flex-start;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
 
 .hyphens {
