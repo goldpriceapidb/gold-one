@@ -7,6 +7,26 @@ export default function VideoComponent(): JSX.Element {
 	)
 }
 
+function ImageOverlay(): JSX.Element {
+	return (
+		<>
+			<img
+				src="/whyChoose/videoStaticBackground.webp"
+				alt="video"
+				height={538}
+				width={956}
+			/>
+			<img
+				className={styles.playButton}
+				src="/whyChoose/play.svg"
+				alt="play"
+				height={100}
+				width={100}
+			/>
+		</>
+	)
+}
+
 function YoutubeIframe(): JSX.Element {
 	const VIDEO_SOURCE = "https://www.youtube.com/embed/-q1Xm7X7s_k"
 	const EMBED_URL: string = `${VIDEO_SOURCE}/?autoplay=1`
