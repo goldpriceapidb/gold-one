@@ -13,7 +13,8 @@ let headerContents: NavHeadingContent[] = [
 	{
 		label: "OUR PRODUCTS",
 		route: "/#our-products",
-		key: "6923882c-b305-4a4b-8d8c-c7ea8ea1f29f"
+		key: "6923882c-b305-4a4b-8d8c-c7ea8ea1f29f",
+		needToScroll: true
 	},
 	{
 		label: "OUR PROCESS",

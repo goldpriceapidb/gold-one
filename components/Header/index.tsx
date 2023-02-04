@@ -2,6 +2,7 @@ import styles from "./header.module.css"
 import { NavHeadingContent } from "../../types/NavHeadingType"
 import { headerContents } from "./data"
 import Link from "next/link"
+
 function Header(): JSX.Element {
 	return (
 		<>
@@ -19,11 +20,36 @@ export default Header
 function NavHeading(props: NavHeadingContent): JSX.Element {
 	return (
 		<>
-			<Link href={props.route + ""} className={styles.navHeading}>
-				<span>{props.label}</span>
-				<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
-			</Link>
+			{props.needToScroll ? (
+				<ScrollToHeading
+					{...props}
+				/>
+			) : (
+				<LinkToHeading
+					{...props}
+				/>
+			)}
 		</>
+	)
+}
+
+function LinkToHeading(props: NavHeadingContent): JSX.Element {
+	return (
+		<Link href={props.route + ""} className={styles.navHeading}>
+			<span>{props.label}</span>
+			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
+		</Link>
+	)
+}
+
+function ScrollToHeading(props: NavHeadingContent): JSX.Element {
+
+	return (
+		
+		<a href={props.route} className={styles.navHeading} >
+			<span>{props.label}</span>
+			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
+		</a>
 	)
 }
 
@@ -34,6 +60,7 @@ function Headings(): JSX.Element {
 				<NavHeading
 					key={element.key}
 					label={element.label}
+					needToScroll={element?.needToScroll}
 					route={element.route}
 				/>
 			))}
