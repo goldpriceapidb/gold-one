@@ -1,7 +1,7 @@
 import styles from "./header.module.css"
 import { NavHeadingContent } from "../../types/NavHeadingType"
 import { headerContents } from "./data"
-
+import Link from "next/link"
 function Header(): JSX.Element {
 	return (
 		<>
@@ -19,10 +19,10 @@ export default Header
 function NavHeading(props: NavHeadingContent): JSX.Element {
 	return (
 		<>
-			<div className={styles.navHeading}>
+			<Link href={props.route + ""} className={styles.navHeading}>
 				<span>{props.label}</span>
 				<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
-			</div>
+			</Link>
 		</>
 	)
 }
