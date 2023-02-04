@@ -114,3 +114,56 @@
 	font-size: 1.2em;
 }
 
+.finalNotes {
+	color: white;
+	font-size: 1.7rem;
+	width: 75%;
+	margin: 0 auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	
+}
+
+.leftBox, .rightBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hereButton {
+	margin-top: 2rem;
+	padding: 1rem 2rem;
+	background-color: #111111;
+	border: 1px solid #dcbe5b;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	border-radius: 30px;
+}
+
+.hereButton span {
+	font-size: 4rem;
+	color: #dcbe5b;
+	margin-left: 0.5rem;
+}
+
+.hereButton a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.hereButton img {
+	margin-top: 0.5rem;
+}
+
+.iconsContainer {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.iconsContainer .iconContainer:not(:last-child) {
+	margin-right: 1.5rem;
+}
