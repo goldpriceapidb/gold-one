@@ -6,8 +6,8 @@ import GoldTypeHolder from "./components/GoldTypeHolder"
 
 export default function Products(): JSX.Element {
 	return (
-		<div className={styles.productsContainer}>
-			<Title pageTitle="OUR PRODUCTS" />
+		<div className={styles.productsContainer} id="our-products">
+			<Title pageTitle="OUR PRODUCTS" needMarginTop={true} />
 			<GoldTypeHolder />
 			<GoldBarsContainer />
 			<FinalNotes />

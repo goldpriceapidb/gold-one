@@ -1,5 +1,6 @@
 export interface TitleProps {
     pageTitle: string
+    needMarginTop?: boolean
 }
 
 export interface GoldBar {

@@ -1,5 +1,10 @@
 .productsContainer {
 	margin-bottom: 10rem;
+	padding-top: 2rem;
+}
+
+.marginTop {
+	margin-top: 5rem;
 }
 
 .partTitle {
