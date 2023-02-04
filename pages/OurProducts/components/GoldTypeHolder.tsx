@@ -1,4 +1,4 @@
-import styles from "./products.module.css"
+import styles from "../products.module.css"
 
 export default function GoldTypeHolder(): JSX.Element {
 	return (
