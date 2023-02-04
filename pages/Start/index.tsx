@@ -5,6 +5,9 @@ import LiveSpotPrice from "./components/LiveSpotPrice"
 import WhyChooseUs from "./components/WhyChoose"
 import VideoComponent from "./components/VideoComponent"
 import PageBreak from "../../components/PageBreak"
+import Products from "../OurProducts"
+import Footer from "../../components/Footer"
+
 import style from "./start.module.css"
 function StartPage(): JSX.Element {
 	return (
@@ -19,6 +22,10 @@ function StartPage(): JSX.Element {
 			</div>
 			<VideoComponent />
 			<PageBreak />
+
+
+			<Products />
+			<Footer />
 		</>
 	)
 }
