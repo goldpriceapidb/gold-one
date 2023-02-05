@@ -23,3 +23,8 @@
     float: right;
     text-align: right;
 }
+
+.links{
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}

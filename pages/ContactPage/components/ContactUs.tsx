@@ -7,17 +7,17 @@ export default function ContactUs(prop: any): JSX.Element {
                 <div className={styles.twoRowDivs}>
                     <div className={styles.iconFlexDiv}>
                         <img src="/icons/email.png" />
-                        <div>refinary@goldone.in</div>
+                        <a className={styles.links} href="mailto:refinary@goldone.in">refinary@goldone.in</a>
                     </div>
                     <div className={styles.iconFlexDiv}>
                         <img src="/icons/web.png" />
-                        <div>www.goldone.in</div>
+                        <a href="www.goldone.in" className={styles.links} >www.goldone.in</a>
                     </div>
                 </div>
                 <img src="/icons/phone.png" className={styles.phoneIcon}></img>
                 <div className={styles.twoRowDivs}>
                     <div>Contact No:</div>
-                    <div className={styles.phoneNo}>+91 44 4864 4137</div>
+                    <a href="tel:4448644137" className={styles.phoneNo}>+91 44 4864 4137</a>
                 </div>
             </div>
         </>

@@ -5,7 +5,7 @@ export default function Footer(): JSX.Element {
             <div className={styles.footerContainer}>
                 <div className={styles.builtBy}>
                     <div>WEBSITE DESIGNED BY THIRDWORLDPOV</div>
-                    <div>WEBSITE BUILT BY ANGRIS</div>
+                    <a className={styles.links} href="https://www.angris.in">WEBSITE BUILT BY ANGRIS</a>
                 </div>
                 <div className={styles.copyRight} >
                     <div>ALL RIGHTS RESERVED</div>
