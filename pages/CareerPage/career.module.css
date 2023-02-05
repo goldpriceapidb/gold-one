@@ -1,0 +1,11 @@
+.centerText{
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Bahnschrift";
+    color:white;
+    margin-top:10vh;
+    margin-bottom: 20vh;
+}
+.centerTitle{
+    margin-bottom: 2rem;
+}

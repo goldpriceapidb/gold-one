@@ -7,6 +7,10 @@ function EquiryPage(): JSX.Element {
         <>
             <Header />
             <Title pageTitle={"EQUIRIES"} />
+            <div className={style.centerText}>
+                <div className={style.centerTitle}>WE ARE LOOKING TO EXPAND</div>
+                <div>Watch out this space regularly for updates.</div>
+            </div>
             <Footer />
 
         </>

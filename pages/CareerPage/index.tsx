@@ -7,6 +7,10 @@ function CareerPage(): JSX.Element {
         <>
             <Header />
             <Title pageTitle={"CAREERS"} />
+            <div className={style.centerText}>
+                <div className={style.centerTitle}>WE ARE HIRING</div>
+                <div>Watch out this space regularly for updates.</div>
+            </div>
             <Footer />
         </>
     )
