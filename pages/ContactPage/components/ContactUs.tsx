@@ -20,6 +20,10 @@ export default function ContactUs(prop: any): JSX.Element {
                     <a href="tel:4448644137" className={styles.phoneNo}>+91 44 4864 4137</a>
                 </div>
             </div>
+            <div className={styles.addressDiv}>
+                <div>Address : A13 Thiru vi ka lndustrial estate Guindy,</div>
+                <div>Chennai - 600032</div>
+            </div>
         </>
     )
 }
