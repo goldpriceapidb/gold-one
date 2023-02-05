@@ -45,7 +45,7 @@ function LinkToHeading(props: NavHeadingContent): JSX.Element {
 function ScrollToHeading(props: NavHeadingContent): JSX.Element {
 
 	return (
-		
+
 		<a href={props.route} className={styles.navHeading} >
 			<span>{props.label}</span>
 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
@@ -83,12 +83,11 @@ function CircularText(): JSX.Element {
 function GOLogo(): JSX.Element {
 	return (
 		<div className={styles.logoContainer}>
-			<div className={styles.imageContainer}>
+			<div >
 				<img
 					src="/header/GO.webp"
 					alt="Gold One Logo"
-					height={200}
-					width={200}
+					className={styles.imageContainer}
 				/>
 			</div>
 		</div>
