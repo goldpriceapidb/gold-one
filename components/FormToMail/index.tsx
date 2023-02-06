@@ -1,3 +1,76 @@
+import { useState } from "react"
+import { DataProps, MailParams } from "../../types/MailTypes"
+import styles from "./formToMail.module.css"
+
+const SEND_TO: string = "refinary@goldone.in"
+const COPY_TO: string = "worldisfullofmeow@gmail.com"
+
+interface QuestionProps {
+	type: "career" | "enquiry"
+}
+
+export default function Question(props: QuestionProps): JSX.Element {
+	let [name, setName] = useState("")
+	let [phone, setPhone] = useState("")
+	let type = props.type
+
+	let handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		if (event.target.name === "name") {
+			setName(event.target.value)
+		} else if (event.target.name === "phone") {
+			setPhone(event.target.value)
+		}
+	}
+
+	let handleSubmit = async (): Promise<void> => {
+		let data: DataProps = {
+			submissionName: name,
+			submissionPhone: phone,
+			formType: type,
+		}
+		let value = await sendMail(data)
+		if (sendSuccess(value)) {
+			setName("")
+			setPhone("")
+		}
+	}
+
+	return (
+		<>
+			{type !== undefined && (
+				<div className={styles.form}>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Name"
+						className={styles.formField}
+						value={name}
+						onChange={handleChange}
+					></input>
+					<br />
+					<input
+						type="text"
+						id="phone"
+						name="phone"
+						placeholder="Phone"
+						className={styles.formField}
+						value={phone}
+						onChange={handleChange}
+					></input>
+					<br />
+					<button
+						type="button"
+						onClick={handleSubmit}
+						className={styles.formSubmit}
+					>
+						Submit
+					</button>
+				</div>
+			)}
+		</>
+	)
+}
 
 async function sendContent(props: MailParams): Promise<string> {
 	try {

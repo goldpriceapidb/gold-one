@@ -1,0 +1,32 @@
+.form {
+	width: 50vw;
+	min-width: 250px;
+	margin: 0 auto;
+	margin-bottom: 10vh;
+}
+.formField {
+	font-size: 2rem;
+	font-family: "Bahnschrift";
+	color: white;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	padding: 1rem;
+	border-bottom: 1px solid #dec25f;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.formSubmit {
+	font-size: 2rem;
+	font-family: "Bahnschrift";
+	color: white;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	padding: 1rem;
+	border-bottom: 1px solid gray;
+	text-align: left;
+	margin-bottom: 2rem;
+	cursor: pointer;
+}
