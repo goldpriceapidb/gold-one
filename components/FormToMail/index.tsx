@@ -20,6 +20,16 @@ async function sendContent(props: MailParams): Promise<string> {
 	}
 }
 
+async function sendMail(props: DataProps): Promise<string> {
+	let data = requestConstructor(props)
+	return await sendContent(data)
+}
+
+function sendSuccess(response: string): boolean {
+	if (response === "OK") return true
+	return false
+}
+
 function requestConstructor(props: DataProps): MailParams {
 	let data: MailParams = {
 		service_id: "service_3my3s1s",
