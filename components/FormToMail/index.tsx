@@ -1,3 +1,25 @@
+
+async function sendContent(props: MailParams): Promise<string> {
+	try {
+		let request = await fetch(
+			"https://api.emailjs.com/api/v1.0/email/send",
+			{
+				method: "POST",
+				body: JSON.stringify(props),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		)
+		let response = await request.text()
+		alert(`Sent successfully: ${response}`)
+		return "OK"
+	} catch (_) {
+		alert("Error sending mail")
+		return "NOPE"
+	}
+}
+
 function requestConstructor(props: DataProps): MailParams {
 	let data: MailParams = {
 		service_id: "service_3my3s1s",
