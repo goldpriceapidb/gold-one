@@ -2,9 +2,13 @@
     margin: 8vw 25vw;
     margin-bottom: 30vh;
     z-index: 20;
+    position: relative;
 }
 .circularText{
-    
+    position: absolute;
+    left: -40px;
+    top: -52px;
+    z-index: -1;
 }
 .line{
     color:white;
