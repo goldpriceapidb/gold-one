@@ -1,20 +1,20 @@
 import styles from "../contact.module.css"
 
-export default function ContactUs(prop: any): JSX.Element {
+export default function ContactUs(): JSX.Element {
     return (
         <>
             <div className={styles.contactFlex}>
                 <div className={styles.twoRowDivs}>
                     <div className={styles.iconFlexDiv}>
-                        <img src="/icons/email.png" />
-                        <a className={styles.links} href="mailto:refinary@goldone.in">refinary@goldone.in</a>
+                        <img src="/icons/email.png" alt="Email" />
+                        <a className={styles.links} href="mailto:refinery@goldone.in">refinery@goldone.in</a>
                     </div>
                     <div className={styles.iconFlexDiv}>
-                        <img src="/icons/web.png" />
+                        <img src="/icons/web.png" alt="Website" />
                         <a href="www.goldone.in" className={styles.links} >www.goldone.in</a>
                     </div>
                 </div>
-                <img src="/icons/phone.png" className={styles.phoneIcon}></img>
+                <img src="/icons/phone.png" alt="Phone" className={styles.phoneIcon}></img>
                 <div className={styles.twoRowDivs}>
                     <div>Contact No:</div>
                     <a href="tel:4448644137" className={styles.phoneNo}>+91 44 4864 4137</a>
