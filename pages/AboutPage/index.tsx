@@ -23,6 +23,9 @@ function AboutPage(): JSX.Element {
                         />
                     ))
                 }
+                <span className={styles.circularText}>
+                    <img src="/header/circularText.svg" alt="Circular Text" height={120} width={120}/>
+                </span>
             </div>
             <Footer />
         </>
