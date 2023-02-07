@@ -45,7 +45,7 @@ export default function LiveSpotPrice(): JSX.Element {
 						</p>
 					</div>
 				</div>
-				
+
 			</div>
 		</>
 	)
@@ -127,8 +127,15 @@ async function getCountryData(countryCode: string): Promise<Country> {
 	let countryData = data.filter(
 		(country: Country) => country.countryCode === countryCode
 	)
+	if (countryCode === "india") {
+		let response = await fetch("http://viewbcastgold.dpgold.in:8811/VOTSBroadcast/Services/xml/GetLiveRate")
+		let data = await response.json()
+		countryData[0].previousPrice = countryData[0].currentPrice
+		countryData[0].currentPrice = parseInt(data.split("\u0009")[23])
+	}
 	return countryData[0]
 }
+
 
 async function getData(): Promise<Country[]> {
 	let response = await fetch(`${API_ENDPOINT}/country/all`)
