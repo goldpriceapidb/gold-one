@@ -1,6 +1,6 @@
 import styles from "../start.module.css"
 import { countries } from "../data"
-import { ChangeEvent, useEffect, useState, useRef } from "react"
+import { ChangeEvent, useEffect, useState } from "react"
 import {
 	CountryType,
 	CountrySelect,
