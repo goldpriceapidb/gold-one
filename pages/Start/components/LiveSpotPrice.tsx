@@ -1,6 +1,6 @@
 import styles from "../start.module.css"
 import { countries } from "../data"
-import { ChangeEvent, useEffect, useState } from "react"
+import { ChangeEvent, useEffect, useState, useRef } from "react"
 import {
 	CountryType,
 	CountrySelect,
@@ -17,6 +17,7 @@ export default function LiveSpotPrice(): JSX.Element {
 	let [karat, setKarat] = useState("24")
 	let [rate, setRate] = useState(0)
 	let [currencySymbol, setCurrencySymbol] = useState("₹")
+	const [check, setCheck] = useState(0)
 
 	useEffect(() => {
 		async function main(): Promise<void> {
@@ -30,6 +31,15 @@ export default function LiveSpotPrice(): JSX.Element {
 	useEffect(() => {
 		updateValues({ countryCode, karat, setRate, setCurrencySymbol })
 	}, [countryCode, karat])
+
+
+	useEffect(() => {
+		const id = setInterval(() => {
+			updateValues({ countryCode, karat, setRate, setCurrencySymbol })
+			setCheck(check + 1)
+		}, 1000);
+		return () => clearInterval(id);
+	}, [check])
 
 	return (
 		<>
