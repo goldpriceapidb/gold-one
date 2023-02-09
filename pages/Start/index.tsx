@@ -10,7 +10,7 @@ import Footer from "../../components/Footer"
 
 import style from "./start.module.css"
 function StartPage(): JSX.Element {
-	console.log("StartPage")
+	console.log("StartPage2")
 	return (
 		<>
 			<Header />

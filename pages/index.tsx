@@ -10,7 +10,6 @@ function IndexPage(): JSX.Element {
 				<title>Gold One Refinery Private Limited</title>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-				<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
 			</Head>
 
 			<Start />
