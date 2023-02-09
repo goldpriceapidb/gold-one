@@ -128,10 +128,10 @@ async function getCountryData(countryCode: string): Promise<Country> {
 		(country: Country) => country.countryCode === countryCode
 	)
 	if (countryCode === "india") {
-		let response = await fetch("http://viewbcastgold.dpgold.in:8811/VOTSBroadcast/Services/xml/GetLiveRate")
+		let response = await fetch(`${API_ENDPOINT}/country/india`)
 		let data = await response.json()
 		countryData[0].previousPrice = countryData[0].currentPrice
-		countryData[0].currentPrice = parseInt(data.split("\u0009")[23])
+		countryData[0].currentPrice = data.value
 	}
 	return countryData[0]
 }
