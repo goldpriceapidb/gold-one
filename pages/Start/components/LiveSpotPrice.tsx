@@ -17,6 +17,7 @@ export default function LiveSpotPrice(): JSX.Element {
 	let [karat, setKarat] = useState("24")
 	let [rate, setRate] = useState(0)
 	let [currencySymbol, setCurrencySymbol] = useState("₹")
+	const [check, setCheck] = useState(0)
 
 	useEffect(() => {
 		async function main(): Promise<void> {
@@ -30,6 +31,17 @@ export default function LiveSpotPrice(): JSX.Element {
 	useEffect(() => {
 		updateValues({ countryCode, karat, setRate, setCurrencySymbol })
 	}, [countryCode, karat])
+
+
+	useEffect(() => {
+		const id = setInterval(() => {
+			if (countryCode === "india") {
+				updateValues({ countryCode, karat, setRate, setCurrencySymbol })
+			}
+			setCheck(check + 1)
+		}, 1000);
+		return () => clearInterval(id);
+	}, [check])
 
 	return (
 		<>
@@ -45,7 +57,7 @@ export default function LiveSpotPrice(): JSX.Element {
 						</p>
 					</div>
 				</div>
-				
+
 			</div>
 		</>
 	)
@@ -127,8 +139,15 @@ async function getCountryData(countryCode: string): Promise<Country> {
 	let countryData = data.filter(
 		(country: Country) => country.countryCode === countryCode
 	)
+	if (countryCode === "india") {
+		let response = await fetch(`${API_ENDPOINT}/country/india`)
+		let data = await response.json()
+		countryData[0].previousPrice = countryData[0].currentPrice
+		countryData[0].currentPrice = data.value
+	}
 	return countryData[0]
 }
+
 
 async function getData(): Promise<Country[]> {
 	let response = await fetch(`${API_ENDPOINT}/country/all`)
