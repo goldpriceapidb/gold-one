@@ -5,6 +5,7 @@ export default function GoldTypeHolder(): JSX.Element {
 		<div className={styles.goldTypeHolder}>
 			<GoldType goldType="995" />
 			<GoldType goldType="999" />
+			<GoldType goldType="999.9" />
 		</div>
 	)
 }

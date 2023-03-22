@@ -5,7 +5,7 @@ import styles from "../products.module.css"
 export default function GoldBarsContainer(): JSX.Element {
 	return (
 		<div className={styles.barsContainer}>
-			{goldBarData.map((goldBar: GoldBar) => {
+			{/* {goldBarData.map((goldBar: GoldBar) => {
 				return (
 					<GoldBar
 						key={goldBar.key}
@@ -15,7 +15,9 @@ export default function GoldBarsContainer(): JSX.Element {
 						barNumber={goldBar.barNumber}
 					/>
 				)
-			})}
+			})} */}
+			<img src="/img/bar-type.png"></img>
+
 		</div>
 	)
 }

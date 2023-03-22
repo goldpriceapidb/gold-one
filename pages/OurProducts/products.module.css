@@ -26,17 +26,20 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin:5vw 3vw;
 }
 
 .goldTypeContainer:not(:last-child) {
 	margin-right: 3rem;
 }
 
+/* #TODO Fix font weight here  */
 .goldType {
 	text-align: center;
-	font-weight: 100;
-	font-size: 9rem;
-	color: white;
+	font-family: "Ubuntu","Cantarell","Open Sans","Helvetica Neue",sans-serif;;
+	font-weight: 200;
+	font-size: 7rem;
+	color: rgb(156, 156, 156);
 	display: block;
 }
 
@@ -56,9 +59,10 @@
 	justify-content: center;
 	align-items: center;
 	background-color: #0e0d12;
-	padding: 2rem 6rem;
+	padding: 6rem 4rem;
 	border-radius: 50px;
 	margin-bottom: 4rem;
+	max-width: 90vw;
 }
 
 .goldBar {

@@ -14,7 +14,7 @@ export interface MailParams {
 }
 
 export interface MailData {
-    data: MailParams
+	data: MailParams
 }
 
 export interface DataProps {
