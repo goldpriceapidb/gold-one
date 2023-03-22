@@ -4,7 +4,8 @@ import styles from "./formToMail.module.css"
 
 const SEND_TO: string = "refinery@goldone.in"
 // const SEND_TO: string = "vinokrish001@gmail.com"
-const COPY_TO: string = "worldisfullofmeow@gmail.com"
+const COPY_TO: string = "refinery@goldone.in"
+// const COPY_TO: string = "worldisfullofmeow@gmail.com"
 
 interface QuestionProps {
 	type: "career" | "enquiry"
