@@ -59,14 +59,25 @@ function YoutubeIframe(): JSX.Element {
 	const EMBED_URL: string = `${VIDEO_SOURCE}`
 
 	return (
-		<iframe
+		// <iframe
+		// 	className={styles.video}
+		// 	width="956"
+		// 	height="538"
+		// 	src={EMBED_URL}
+		// 	frameBorder={0}
+		// 	allow="accelerometer; autoplay=true; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		// 	allowFullScreen
+		// ></iframe>
+
+		<video
 			className={styles.video}
-			width="956"
-			height="538"
-			src={EMBED_URL}
-			frameBorder={0}
-			allow="accelerometer; autoplay=true; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			allowFullScreen
-		></iframe>
+
+			controls
+		>
+			<source src={EMBED_URL} type="video/mp4" />
+
+		</video>
+
+
 	)
 }

@@ -71,7 +71,7 @@ function Icon(props: any): JSX.Element {
 	return (
 		<div className={styles.iconContainer}>
 			<a href={props.url} target="_blank" rel="noreferrer">
-				<img src={props.src} alt={props.alt} height={50} width={50} />
+				<img src={props.src} alt={props.alt} height={30} width={30} />
 			</a>
 		</div>
 	)

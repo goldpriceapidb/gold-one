@@ -17,6 +17,7 @@
 }
 
 .goldTypeHolder {
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -176,3 +177,60 @@
 .iconsContainer .iconContainer:not(:last-child) {
 	margin-right: 1.5rem;
 }
+
+
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+	.productsContainer{
+		margin-bottom: 5rem;
+	}
+
+	.barsContainer{
+		width: 60vw;		
+		margin: 0.5rem 1rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+	.barsContainer img{
+		width: 130%;
+	}
+
+	.finalNotes {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.titleContent {
+		margin-top: 3rem;
+		font-size: 1rem;
+	}
+	.hereButton span{
+		font-size: 3rem;
+	}
+	.goldType{
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+	.separatorHyphen{
+		width: 1rem;
+	}
+	.goldTypeContainer{
+		padding: 0;
+		margin-left:1rem;
+	}
+	.goldTypeContainer:not(:last-child) {
+		margin-right: 1rem;
+	}
+	.goldTypeContainer{
+		margin-top:0vh;
+	}
+	.marginTop {
+		margin-top: 1rem;
+	}
+	
+}
+  

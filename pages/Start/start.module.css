@@ -14,7 +14,7 @@
 
 .quoteContainer {
 	background-color: #0c0c0c;
-	width: 100%;
+	width: 100vw;
 	height: 15vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -233,3 +233,14 @@
 	transform: translate(-50%, -50%);
 	cursor: pointer;
 }
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+	.quoteContainer {
+		padding-left: 2rem;
+		max-width: fit-content;
+	}
+	
+  }
+  
