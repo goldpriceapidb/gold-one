@@ -42,6 +42,9 @@
 	width: 100%;
 }
 
+.mobileWrapper{
+	display: none;
+}
 .headingTitle {
 	text-align: center;
 	font-size: 2rem;
@@ -153,7 +156,7 @@
 	display: grid;
 	-ms-grid-columns: 2fr 4vw 4fr;
 	grid-template-columns: 2fr 4fr;
-	margin: 0 10vw;
+	margin: 0 20vw;
 	grid-gap: 4vw;
 }
 
@@ -233,7 +236,10 @@
 	transform: translate(-50%, -50%);
 	cursor: pointer;
 }
-
+.iconDiv img{
+	width: 60px;
+	height: 60px;
+}
 
 /* Media queries */
 @media only screen and (max-width: 768px) {
@@ -241,6 +247,39 @@
 		padding-left: 2rem;
 		max-width: fit-content;
 	}
-	
+	.wrapper{
+		max-width: fit-content;
+		padding:0;
+		display: none;
+	}
+	.mobileWrapper{
+		display: block;
+		width: 80vw;
+		margin:0 10vw;
+	}
+	.headingTitle{
+		font-size: 1.5rem;
+	}
+	.value{
+		font-size: 1.5rem;
+	}
+	.gridChoosePrice{
+		margin:0;
+		padding:0;
+	}
+	.liveSpotPriceContainer{
+		width: 80vw;
+		margin-bottom: 3rem;
+	}
+	.iconDiv img{
+		width: 30px;
+		height: 30px;
+	}
+	.iconDiv span{
+		font-size: 0.7rem;
+	}
+	.gridChoosePrice {
+		display: block;
+	}
   }
   

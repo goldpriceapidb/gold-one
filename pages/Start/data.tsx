@@ -265,23 +265,23 @@ let countries: CountryType[] = [
 let whyChooseUsIcons: Icons[] = [
 
 	{
-		text: "NABL &emsp; &emsp; Certified Lab",
+		text: "NABL Certified Lab",
 		iconSrc: "/whyChoose/1.webp",
 		key: "5b71a980-2658-4b8b-afb4-1dcfdbc8eaff"
 	},
-	
+
 	{
 		text: "Refining & Quality Assurance",
 		iconSrc: "/whyChoose/2.webp",
 		key: "d4eeed2e-712b-4933-ab64-dbb7febb2fde"
 	},
-	
+
 	{
 		text: "100% Buy Back Policy",
 		iconSrc: "/whyChoose/3.webp",
 		key: "35c67624-67d2-4af5-883f-ca853ddb04a7"
 	},
-	
+
 	{
 		text: "Product Packaging",
 		iconSrc: "/whyChoose/4.webp",

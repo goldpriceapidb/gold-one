@@ -17,10 +17,10 @@ function StartPage(): JSX.Element {
 
 			<HeroSlider />
 			<Quote />
-			{/* <div className={style.gridChoosePrice}>
+			<div className={style.gridChoosePrice}>
 				<LiveSpotPrice />
 				<WhyChooseUs />
-			</div> */}
+			</div>
 			<VideoComponent />
 			<PageBreak />
 

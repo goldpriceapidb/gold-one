@@ -57,7 +57,20 @@ export default function LiveSpotPrice(): JSX.Element {
 						</p>
 					</div>
 				</div>
+			</div>
 
+			<div className={styles.mobileWrapper}>
+				<span className={styles.headingTitle}>LIVE SPOT PRICE</span>
+
+				<div className={styles.liveSpotPriceContainer}>
+					<div className={styles.formContainer}>
+						<CountrySelectOption setCountryCode={setCountryCode} />
+						<PuritySelectOption setKarat={setKarat} />
+						<p className={styles.value}>
+							{rate} {currencySymbol}
+						</p>
+					</div>
+				</div>
 			</div>
 		</>
 	)
