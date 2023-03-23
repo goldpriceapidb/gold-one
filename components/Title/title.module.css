@@ -16,3 +16,14 @@
 .titleContainer{
     margin-top: 12vh;
 }
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .titleText{
+        font-size: 2.5rem;
+    }
+    .titleContainer{
+        margin-top: 6vh;
+    }
+    
+}

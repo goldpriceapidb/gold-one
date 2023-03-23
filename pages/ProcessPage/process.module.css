@@ -20,6 +20,9 @@
 	white-space: nowrap;
 }
 
+.mobileParaGrid{
+	display:none;
+}
 /* https://stackoverflow.com/a/20422695 */
 .paraTitle::after {
 	content: "meowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeowmeow";
@@ -41,4 +44,29 @@
 .goldenLine {
 	border-top: 2px solid #cfab48;
 	width: 100%;
+}
+
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .mobileParaGrid{
+		display:block;
+		margin:8vw;
+		margin-bottom: 10vh;
+	}
+	.paraGrid{
+		display:none;
+	}
+	.paraContent {
+		font-size: 0.75rem;
+		line-height: 1rem;
+	}
+	.paraTitle {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+		font-weight: 600;
+		overflow: hidden;
+		white-space: nowrap;
+	}
 }

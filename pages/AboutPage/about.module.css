@@ -18,3 +18,15 @@
     line-height: 3rem;
     text-align: justify;
 }
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .lineContainer{
+        margin: 10vw;
+        margin-bottom: 10vh;
+    }
+    .line{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}

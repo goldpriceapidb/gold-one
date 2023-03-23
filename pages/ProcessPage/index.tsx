@@ -29,6 +29,22 @@ function ProcessPage(): JSX.Element {
                     ))}
                 </div>
             </div>
+            <div className={styles.mobileParaGrid}>
+                {paragraphContentCol1.map((element) => (
+                    <Paragraph
+                        key={element.key}
+                        title={element.title}
+                        content={element.content}
+                    />
+                ))}
+                {paragraphContentCol2.map((element) => (
+                    <Paragraph
+                        key={element.key}
+                        title={element.title}
+                        content={element.content}
+                    />
+                ))}
+            </div>
             <Footer />
         </>
 

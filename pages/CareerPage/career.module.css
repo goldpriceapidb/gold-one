@@ -4,8 +4,22 @@
     font-family: "Bahnschrift";
     color:white;
     margin-top:10vh;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
+    max-width: 100%;
 }
+
 .centerTitle{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .centerText {
+    font-size: 1.25rem;
+    margin: 2rem;
+  }
+  .centerTitle{
+    margin-bottom: 0.5rem;
+  }
+  
 }

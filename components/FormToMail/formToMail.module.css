@@ -30,3 +30,20 @@
 	margin-bottom: 2rem;
 	cursor: pointer;
 }
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+	.form {
+		width: 85vw;
+		padding: 5vw;
+		margin:0;
+	}
+	.formField {
+		font-size: 1.1rem;
+		margin-bottom: 0rem;
+	}
+	.formSubmit {
+		margin-top: 1rem;
+		font-size: 1.1rem;
+	}
+}

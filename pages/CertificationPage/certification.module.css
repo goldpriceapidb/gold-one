@@ -19,3 +19,11 @@
     color: white;
     text-align: center;
 }
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .imageCaption{
+        font-size: 1.5rem;
+        margin-bottom: 5vh;
+    }
+}

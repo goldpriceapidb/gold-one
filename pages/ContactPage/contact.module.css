@@ -50,3 +50,33 @@
     margin-bottom: 15vh;
     text-align: center;
 }
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .contactFlex{
+        margin-top: 8vh;
+    }
+    .phoneNo{
+        font-size: 1rem;
+    }
+    .addressDiv{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .twoRowDivs{
+        font-size: 1rem;
+    }
+    .iconFlexDiv{
+        font-size: 1rem;
+    }
+    .iconFlexDiv a{
+        padding-top: 0.75rem;
+    }
+    .phoneIcon{
+        width: 3rem;
+        height: auto;
+    }
+    .icon{
+        height:1rem;
+    }
+}
