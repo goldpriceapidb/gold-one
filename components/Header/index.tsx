@@ -55,7 +55,7 @@ function ScrollToHeading(props: NavHeadingContent): JSX.Element {
 
 function Headings(): JSX.Element {
 	return (
-		<>
+		<div className={styles.navRowStyle}>
 			{headerContents.map((element: NavHeadingContent) => (
 				<NavHeading
 					key={element.key}
@@ -64,7 +64,7 @@ function Headings(): JSX.Element {
 					route={element.route}
 				/>
 			))}
-		</>
+		</div>
 	)
 }
 
