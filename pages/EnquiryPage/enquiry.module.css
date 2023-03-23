@@ -9,3 +9,15 @@
 .centerTitle{
     margin-bottom: 2rem;
 }
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    .centerText {
+      font-size: 1.25rem;
+      margin: 2rem;
+    }
+    .centerTitle{
+      margin-bottom: 0.5rem;
+    }
+    
+}
+  
