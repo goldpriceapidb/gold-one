@@ -6,9 +6,9 @@ import Line from "./components/Line"
 function AboutPage(): JSX.Element {
 
     const data = [
-        { key: 1, line: "Gold One Refinery Private Limited has received a formal recognition of competence of a laboratory by the NABL in accordance with international criteria. This comes with an array of benefits for the brand." },
-        { key: 2, line: "Firstly, it leads to a potential increase in business due to enhanced customer confidence and satisfaction. It also helps you save in terms of time and money." },
-        { key: 3, line: "Lastly, the company will enjoy greater access for their products, in both domestic and international markets when tested by accredited laboratories." },
+        { key: 1, line: "GGold One Refinery Private Limited was incorporated in 2019 with the goal of providing pure gold bars to businesses and investors. We have a wide variety of sizes and weights to choose from, so you can find the perfect bar for your needs. Our goal is to provide our customers with the best benefits and the highest quality gold possible. We always price our products at the current market rate and follow all industry standards when refining our gold." },
+        { key: 2, line: "Gold One Refinery Private Limited has earned a formal acknowledgement of laboratory proficiency from the NABL in accordance with international standards. This provides our customers and investors with the confidence that they're getting a top-quality product, increasing business on account of improved customer satisfaction. It also helps in saving both time and money as the re-testing of products is no longer necessary." },
+        { key: 3, line: "Due to testing by authorized labs and our high-quality finish, Gold One is present as a seller in both domestic and international markets." },
     ]
     return (
         <>
@@ -24,7 +24,7 @@ function AboutPage(): JSX.Element {
                     ))
                 }
                 <span className={styles.circularText}>
-                    <img src="/header/circularText.svg" alt="Circular Text" height={120} width={120}/>
+                    <img src="/header/circularText.svg" alt="Circular Text" height={120} width={120} />
                 </span>
             </div>
             <Footer />
