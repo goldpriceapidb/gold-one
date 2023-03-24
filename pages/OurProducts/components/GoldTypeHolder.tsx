@@ -3,8 +3,8 @@ import styles from "../products.module.css"
 export default function GoldTypeHolder(): JSX.Element {
 	return (
 		<div className={styles.goldTypeHolder}>
-			<GoldType goldType="995" />
-			<GoldType goldType="999" />
+			<GoldType goldType="⠀995⠀" />
+			<GoldType goldType="⠀999⠀" />
 			<GoldType goldType="999.9" />
 		</div>
 	)

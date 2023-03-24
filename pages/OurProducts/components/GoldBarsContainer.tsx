@@ -16,7 +16,7 @@ export default function GoldBarsContainer(): JSX.Element {
 					/>
 				)
 			})} */}
-			<img src="/img/bar-type.png"></img>
+			<img className={styles.barsImage} src="/img/bar-type.png"></img>
 
 		</div>
 	)

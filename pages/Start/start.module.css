@@ -14,7 +14,7 @@
 
 .quoteContainer {
 	background-color: #0c0c0c;
-	width: 100vw;
+	width: 98vw;
 	height: 15vh;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -30,6 +30,8 @@
 	-ms-flex-pack: center;
 	justify-content: center;
 	margin-bottom: 4rem;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .quoteSpan {
@@ -208,7 +210,9 @@
 	display: flex;
     align-items: center;
     justify-content: center;
-	width: 100vw;
+	width: 95vw;
+	margin-left: auto;
+    margin-right: auto;
 }
 
 .videoOverlay {
@@ -219,7 +223,7 @@
 
 .video {
 	border-radius: 12px;
-	width: 100vw;
+	width: 95vw;
 
 }
 
