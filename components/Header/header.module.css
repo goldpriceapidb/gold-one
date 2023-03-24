@@ -84,17 +84,18 @@
     }
     .navHeading{
         font-size: 0.75rem;
-
+        margin-top: 0.6rem;
     }
     .navRowStyle{
         margin-top: 5rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
         gap: 10px;
     }
     .headerWrapper {
         justify-content: center;
+        height: 27vh;
     }
 
 }
