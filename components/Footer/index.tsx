@@ -10,7 +10,7 @@ export default function Footer(): JSX.Element {
                 <div className={styles.copyRight} >
                     <div>ALL RIGHTS RESERVED</div>
                     <div>GOLD ONE</div>
-                    <div>2023</div>
+                    <div>{new Date().getFullYear()}</div>
                 </div>
             </div>
         </>
