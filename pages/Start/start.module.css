@@ -36,7 +36,8 @@
 
 .quoteSpan {
 	margin-top: 0.5rem;
-	color: #8e8e8e;
+    color: #8e8e8e;
+    text-align: justify;
 }
 
 .wrapper {
@@ -248,8 +249,10 @@
 /* Media queries */
 @media only screen and (max-width: 768px) {
 	.quoteContainer {
-		padding-left: 2rem;
+		padding: 1.2rem 1.6rem;
+		max-width: -moz-fit-content;
 		max-width: fit-content;
+		width: 90vw;
 	}
 	.wrapper{
 		max-width: fit-content;

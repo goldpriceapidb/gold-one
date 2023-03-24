@@ -194,13 +194,12 @@
 	}
 
 	.barsContainer{
-		width: 60vw;		
-		margin: 0.5rem 1rem;
-		padding-top: 3rem;
-		padding-bottom: 3rem;
+		width: 81vw;
+		margin: 0.5rem auto;
+		padding: 1rem 0.7rem;
 	}
 	.barsContainer img{
-		width: 130%;
+		width: 98%;
 	}
 
 	.finalNotes {
