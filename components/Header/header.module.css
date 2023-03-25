@@ -50,8 +50,8 @@
 }
 
 .imageContainer{
-    width: 12rem;
-    height: 12rem;
+    width: 200px;
+    height: 200px;
 }
 
 .imageContainer img{
@@ -101,4 +101,28 @@
     }
 
 }
+
+@media only screen and (max-width: 1380px) {
+    .navRowStyle {
+        width: 60vw;
+        flex-wrap: wrap;
+    }
+
+    .navHeading {
+        font-size: 0.8rem;
+        margin-top: 0;
+        margin-bottom: 1.1rem;
+    }
+
+    .navHeading :first-child {
+        margin-top: 0;
+    }
+
+    .imageContainer {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
 /* #test */
