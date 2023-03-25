@@ -89,15 +89,15 @@
         margin-top: 0.6rem;
     }
     .navRowStyle{
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 7px;
     }
     .headerWrapper {
         justify-content: center;
-        height: 27vh;
+        height: 23vh;
     }
 
 }
