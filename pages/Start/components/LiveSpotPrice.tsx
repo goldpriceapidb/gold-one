@@ -35,9 +35,7 @@ export default function LiveSpotPrice(): JSX.Element {
 
 	useEffect(() => {
 		const id = setInterval(() => {
-			if (countryCode === "india") {
-				updateValues({ countryCode, karat, setRate, setCurrencySymbol })
-			}
+			updateValues({ countryCode, karat, setRate, setCurrencySymbol })
 			setCheck(check + 1)
 		}, 1000);
 		return () => clearInterval(id);
