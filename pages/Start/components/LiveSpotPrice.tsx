@@ -34,10 +34,11 @@ export default function LiveSpotPrice(): JSX.Element {
 
 
 	useEffect(() => {
-		const id = setInterval(() => {
+		const id = setTimeout(() => {
+			console.log(countryCode)
 			updateValues({ countryCode, karat, setRate, setCurrencySymbol })
 			setCheck(check + 1)
-		}, 500);
+		}, 1000);
 		return () => clearInterval(id);
 	}, [check])
 
@@ -178,6 +179,9 @@ async function updateValues({
 	karat: selectedKarat,
 }: RenderValue): Promise<void> {
 	let countryData = await getCountryData(countryCode)
+	if (countryData.countryCode != countryCode) {
+		console.log("Country code not found")
+	}
 	setCurrencySymbol(countryData.currencySymbol)
 
 	let DEFAULT_KARAT = 24
