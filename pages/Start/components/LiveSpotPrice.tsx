@@ -37,7 +37,7 @@ export default function LiveSpotPrice(): JSX.Element {
 		const id = setInterval(() => {
 			updateValues({ countryCode, karat, setRate, setCurrencySymbol })
 			setCheck(check + 1)
-		}, 1000);
+		}, 500);
 		return () => clearInterval(id);
 	}, [check])
 
