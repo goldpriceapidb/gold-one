@@ -122,6 +122,8 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 7px;
+        width: 90vw;
+
     }
     .headerWrapper {
         justify-content: center;
