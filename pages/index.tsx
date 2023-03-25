@@ -51,6 +51,10 @@ function IndexPage(): JSX.Element {
 					user-select: none; /* Non-prefixed version, currently
 										  supported by Chrome, Edge, Opera and Firefox */
 				}
+
+				#__next {
+					position: relative;
+				}
 			`}</style>
 		</>
 	)
