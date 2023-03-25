@@ -9,6 +9,8 @@
 	color: #ffffff;
     font-family: "Bahnschrift";
     height: 20vh;
+    /* padding:0.5rem; */
+    /* margin-bottom: 200vh; */
 }
 
 .headerWrapper * {
