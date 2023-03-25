@@ -83,13 +83,13 @@ function CircularText(): JSX.Element {
 function GOLogo(): JSX.Element {
 	return (
 		<div className={styles.logoContainer}>
-			<div >
+			<Link href="/" >
 				<img
 					src="/header/GO.webp"
 					alt="Gold One Logo"
 					className={styles.imageContainer}
 				/>
-			</div>
+			</Link>
 		</div>
 	)
 }

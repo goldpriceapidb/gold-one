@@ -1,5 +1,6 @@
 import styles from '../products.module.css'
 import { goldBarData, iconsData, SocialMediaProps } from "../data"
+import Link from "next/link"
 
 export default function FinalNotes(): JSX.Element {
 	return (
@@ -23,13 +24,9 @@ function HereButton(): JSX.Element {
 	return (
 		<div className={styles.hereButton}>
 			<span>
-				<a
-					href="https://google.com"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<Link href="/enquiry">
 					HERE
-				</a>
+				</Link>
 			</span>
 			<img
 				src="/socials/select.webp"
