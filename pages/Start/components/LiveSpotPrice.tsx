@@ -14,6 +14,7 @@ import { get, set } from "idb-keyval"
 
 const API_ENDPOINT: string = "https://gold-price.hop.sh/api"
 const LOCALSTORAGE_SELECTED_COUNTRY = "selectedCountry"
+const LOCALSTORAGE_SELECTED_KARAT = "selectedKarat"
 
 export default function LiveSpotPrice(): JSX.Element {
 	let [countryCode, setCountryCode] = useState("india")
@@ -40,6 +41,7 @@ export default function LiveSpotPrice(): JSX.Element {
 					LOCALSTORAGE_SELECTED_COUNTRY,
 					countryCode
 				)
+				window.localStorage.setItem(LOCALSTORAGE_SELECTED_KARAT, karat)
 			}
 
 			if (countryCode != "india") {
