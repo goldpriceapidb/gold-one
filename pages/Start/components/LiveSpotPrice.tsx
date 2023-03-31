@@ -22,6 +22,7 @@ export default function LiveSpotPrice(): JSX.Element {
 	let [currencySymbol, setCurrencySymbol] = useState("₹")
 	const [check, setCheck] = useState(0)
 
+	// Get Data from API and sync with IndexedDB
 	useEffect(() => {
 		async function main(): Promise<void> {
 			let data = await getData()
