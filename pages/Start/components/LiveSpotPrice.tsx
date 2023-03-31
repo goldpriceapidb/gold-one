@@ -234,7 +234,7 @@ async function updateValues({
 
 	let DEFAULT_KARAT = 24
 	let rate = countryData.currentPrice / DEFAULT_KARAT
-	rate = rate * parseInt(selectedKarat)
+	rate = rate * parseInt(selectedKarat != undefined ? selectedKarat : "0")
 
 	let rateString = rate.toFixed(2)
 	rate = parseFloat(rateString)
