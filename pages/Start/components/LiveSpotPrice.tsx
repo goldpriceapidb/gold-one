@@ -150,19 +150,13 @@ function CountryOption(props: CountryType): JSX.Element {
 	)
 }
 
-
 async function getCountryData(countryCode: string): Promise<Country> {
 	let data: any = await get("countries")
 	if (data === undefined) data = await getData()
 	let countryData = data.filter(
 		(country: Country) => country.countryCode === countryCode
 	)
-	if (countryCode === "india") {
-		let response = await fetch(`${API_ENDPOINT}/country/india`)
-		let data = await response.json()
-		countryData[0].previousPrice = countryData[0].currentPrice
-		countryData[0].currentPrice = data.value
-	}
+	
 	return countryData[0]
 }
 
