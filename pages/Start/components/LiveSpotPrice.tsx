@@ -31,8 +31,36 @@ export default function LiveSpotPrice(): JSX.Element {
 		main()
 	}, [])
 
+	// Run updateValues if countryCode or karat value changes
 	useEffect(() => {
-		updateValues({ countryCode, karat, setRate, setCurrencySymbol })
+		async function render() {
+			if (typeof window != undefined) {
+				window.localStorage.setItem(
+					LOCALSTORAGE_SELECTED_COUNTRY,
+					countryCode
+				)
+			}
+
+			if (countryCode != "india") {
+				updateValues({ countryCode, karat, setRate, setCurrencySymbol })
+			} else {
+				let values = await updateValuesForIndia({
+					countryCode,
+					karat,
+					setRate,
+					setCurrencySymbol,
+				})
+				let currencySymbol = values?.currencySymbol
+				let rate = values?.rate
+				renderValuesForIndia({
+					setCurrencySymbol,
+					setRate,
+					currencySymbol,
+					rate,
+				})
+			}
+		}
+		render()
 	}, [countryCode, karat])
 
 	// Sync India Data with IndexedDB continuously
