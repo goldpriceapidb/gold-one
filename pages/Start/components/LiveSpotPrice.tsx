@@ -212,3 +212,17 @@ async function updateValues({
 	rate = parseFloat(rateString)
 	setRate(rate)
 }
+
+
+function renderValuesForIndia({
+	setCurrencySymbol,
+	setRate,
+	currencySymbol,
+	rate,
+}: RenderValuesForIndia): void {
+	if (currencySymbol == undefined) return
+	if (rate == undefined) return
+
+	setCurrencySymbol(currencySymbol)
+	setRate(rate)
+}
