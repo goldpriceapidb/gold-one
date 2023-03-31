@@ -49,7 +49,6 @@ export default function LiveSpotPrice(): JSX.Element {
 			} else {
 				let values = await updateValuesForIndia({
 					countryCode,
-					karat,
 					setRate,
 					setCurrencySymbol,
 				})
@@ -247,8 +246,9 @@ async function updateValuesForIndia({
 	setCurrencySymbol,
 	setRate,
 	countryCode,
-	karat: selectedKarat,
 }: RenderValue): Promise<PromiseOfUpdateIndiaFunction | void> {
+	let selectedKarat = window.localStorage.getItem(LOCALSTORAGE_SELECTED_KARAT)
+	selectedKarat = selectedKarat != null ? selectedKarat : "24"
 
 	if (typeof window != undefined) {
 		let selected = window.localStorage.getItem(
@@ -276,7 +276,6 @@ async function updateValuesForIndia({
 			setCurrencySymbol,
 			setRate,
 			countryCode,
-			karat: selectedKarat,
 		})
 
 		let currencySymbol = response?.currencySymbol
