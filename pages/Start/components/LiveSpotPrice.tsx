@@ -166,6 +166,26 @@ async function getCountryData(countryCode: string): Promise<Country> {
 	return countryData[0]
 }
 
+async function updateDataForIndia(): Promise<void> {
+	let countries = await get("countries")
+
+	let response = await fetch(`${API_ENDPOINT}/country/india`)
+	let data = await response.json()
+
+	let newCountries = countries.map((country: Country) => {
+		if (country.countryCode !== "india") return country
+
+		let newCountry: Country = {
+			...country,
+			previousPrice: country.currentPrice,
+			currentPrice: data.value,
+		}
+
+		return newCountry
+	})
+
+	await set("countries", newCountries)
+}
 
 async function getData(): Promise<Country[]> {
 	let response = await fetch(`${API_ENDPOINT}/country/all`)
