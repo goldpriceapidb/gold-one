@@ -185,7 +185,7 @@ async function getCountryData(countryCode: string): Promise<Country> {
 	let countryData = data.filter(
 		(country: Country) => country.countryCode === countryCode
 	)
-	
+
 	return countryData[0]
 }
 
@@ -247,6 +247,7 @@ async function updateValuesForIndia({
 	setRate,
 	countryCode,
 }: RenderValue): Promise<PromiseOfUpdateIndiaFunction | void> {
+	
 	let selectedKarat = window.localStorage.getItem(LOCALSTORAGE_SELECTED_KARAT)
 	selectedKarat = selectedKarat != null ? selectedKarat : "24"
 
@@ -258,7 +259,7 @@ async function updateValuesForIndia({
 			return
 		}
 	}
-	
+
 	let countryData = await getCountryData(countryCode)
 
 	let DEFAULT_KARAT = 24
