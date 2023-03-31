@@ -35,21 +35,17 @@ export default function LiveSpotPrice(): JSX.Element {
 		updateValues({ countryCode, karat, setRate, setCurrencySymbol })
 	}, [countryCode, karat])
 
-
+	// Sync India Data with IndexedDB continuously
 	useEffect(() => {
-		const id = setInterval(() => {
-			// if (countryCode !== "india") return
-			updateValues({ countryCode, karat, setRate, setCurrencySymbol })
-		}, 1000)
-		// const ctry = setInterval(() => {
-		// 	setCountryCode(countryCode)
-		// }, 500)
-		return () => {
-			// clearInterval(ctry)
-			clearInterval(id)
+		let id: NodeJS.Timer
+		async function runFunctionForIndia(): Promise<void> {
+			await updateDataForIndia()
+			id = setTimeout(runFunctionForIndia, 0)
 		}
+		runFunctionForIndia()
 
-	}, [countryCode, karat])
+		return () => clearInterval(id)
+	})
 
 	return (
 		<>
