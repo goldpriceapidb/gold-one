@@ -6,11 +6,14 @@ import {
 	CountrySelect,
 	KaratSelect,
 	Country,
+	RenderValuesForIndia,
 	RenderValue,
+	PromiseOfUpdateIndiaFunction,
 } from "../../../types/StartPageTypes"
 import { get, set } from "idb-keyval"
 
 const API_ENDPOINT: string = "https://gold-price.hop.sh/api"
+const LOCALSTORAGE_SELECTED_COUNTRY = "selectedCountry"
 
 export default function LiveSpotPrice(): JSX.Element {
 	let [countryCode, setCountryCode] = useState("india")
@@ -213,6 +216,58 @@ async function updateValues({
 	setRate(rate)
 }
 
+async function updateValuesForIndia({
+	setCurrencySymbol,
+	setRate,
+	countryCode,
+	karat: selectedKarat,
+}: RenderValue): Promise<PromiseOfUpdateIndiaFunction | void> {
+
+	if (typeof window != undefined) {
+		let selected = window.localStorage.getItem(
+			LOCALSTORAGE_SELECTED_COUNTRY
+		)
+		if (selected != "india") {
+			return
+		}
+	}
+	
+	let countryData = await getCountryData(countryCode)
+
+	let DEFAULT_KARAT = 24
+	let rate = countryData.currentPrice / DEFAULT_KARAT
+	rate = rate * parseInt(selectedKarat)
+
+	let rateString = rate.toFixed(2)
+	rate = parseFloat(rateString)
+
+	setCurrencySymbol(countryData.currencySymbol)
+	setRate(rate)
+
+	setTimeout(async () => {
+		let response = await updateValuesForIndia({
+			setCurrencySymbol,
+			setRate,
+			countryCode,
+			karat: selectedKarat,
+		})
+
+		let currencySymbol = response?.currencySymbol
+		let rate = response?.rate
+
+		renderValuesForIndia({
+			setCurrencySymbol,
+			setRate,
+			currencySymbol,
+			rate,
+		})
+	})
+
+	return {
+		currencySymbol: countryData.currencySymbol,
+		rate,
+	}
+}
 
 function renderValuesForIndia({
 	setCurrencySymbol,
