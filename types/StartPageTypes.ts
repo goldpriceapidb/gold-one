@@ -43,6 +43,18 @@ export interface RenderValue {
 	karat: string
 }
 
+export interface RenderValuesForIndia {
+	setCurrencySymbol: Dispatch<SetStateAction<string>>
+	setRate: Dispatch<SetStateAction<number>>
+	currencySymbol: string | undefined
+	rate: number | undefined
+}
+
+export interface PromiseOfUpdateIndiaFunction {
+	currencySymbol: string
+	rate: number
+}
+
 export interface Icons {
 	text: string
 	iconSrc: string
