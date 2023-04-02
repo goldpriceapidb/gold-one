@@ -191,6 +191,9 @@ async function getCountryData(countryCode: string): Promise<Country> {
 
 async function updateDataForIndia(): Promise<void> {
 	let countries = await get("countries")
+	if(countries === undefined) {
+		countries = await getData()
+	}
 
 	let response = await fetch(`${API_ENDPOINT}/country/india`)
 	let data = await response.json()
