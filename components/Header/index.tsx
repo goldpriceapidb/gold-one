@@ -2,6 +2,7 @@ import styles from "./header.module.css"
 import { NavHeadingContent } from "../../types/NavHeadingType"
 import { headerContents } from "./data"
 import Link from "next/link"
+import { useRouter } from 'next/router';
 
 function Header(): JSX.Element {
 	return (
@@ -34,6 +35,19 @@ function NavHeading(props: NavHeadingContent): JSX.Element {
 }
 
 function LinkToHeading(props: NavHeadingContent): JSX.Element {
+	// const router = useRouter();
+	// let path = `${router.asPath}`;
+	// if (path == "/#our-products") {
+	// 	return (
+	// 		<Link href={props.route + ""} className={styles.navHeading}>
+	// 			<span>{props.label}</span>
+	// 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
+	// 		</Link>
+	// 	)
+	// }
+	// className={path == props.route ? styles.activeNavHeader : ''}
+	// console.log(path + " " + props.route);
+
 	return (
 		<Link href={props.route + ""} className={styles.navHeading}>
 			<span>{props.label}</span>
@@ -43,7 +57,16 @@ function LinkToHeading(props: NavHeadingContent): JSX.Element {
 }
 
 function ScrollToHeading(props: NavHeadingContent): JSX.Element {
-
+	// const router = useRouter();
+	// const path = `${router.asPath}`;
+	// if (path != "/#our-products") {
+	// 	return (
+	// 		<a href={props.route} className={styles.navHeading} >
+	// 			<span >{props.label}</span>
+	// 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
+	// 		</a>
+	// 	)
+	// }
 	return (
 
 		<a href={props.route} className={styles.navHeading} >
