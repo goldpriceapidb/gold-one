@@ -2,12 +2,15 @@
         color: inherit; /* blue colors for links too */
         text-decoration: inherit; /* no underline */
 }
+.wholeContactDetails{
+    scale:85%;
+}
 .contactFlex{
     display:flex; 
     justify-content: center;
     margin: 0 auto;
-    margin-top: 15vh;
-    margin-bottom: 5vh;
+    margin-top: 8vh;
+    margin-bottom: 2vh;
     height: 10vh;
 }
 
@@ -26,9 +29,7 @@
     font-size: 2rem;
     font-weight: 300;
 }
-.icon{
-    height:1.2rem;
-}
+
 .phoneIcon{
     width: 4rem;
     height: auto;
@@ -56,6 +57,10 @@
     .contactFlex{
         margin-top: 8vh;
     }
+    .wholeContactDetails{
+        scale:95%;
+        margin-bottom: 24vh;
+    }
     .phoneNo{
         font-size: 1rem;
     }
@@ -75,8 +80,5 @@
     .phoneIcon{
         width: 3rem;
         height: auto;
-    }
-    .icon{
-        height:1rem;
     }
 }

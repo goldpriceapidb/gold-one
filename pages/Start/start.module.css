@@ -161,6 +161,7 @@
 	grid-template-columns: 2fr 4fr;
 	margin: 0 20vw;
 	grid-gap: 4vw;
+	/* TODONEW Set max width ? Affects if the window is partially minimized */
 }
 
 .iconsContainer {
@@ -188,8 +189,13 @@
 	-ms-flex-pack: center;
 	justify-content: center;
 	margin-bottom: 3rem;
+	transition: transform 0.2s ease;
+
 }
 
+.iconDiv:hover{
+	transform: scale(1.04);
+}
 .iconDiv span {
 	font-size: 2rem;
 	color: #ffffff;

@@ -1,7 +1,6 @@
 .lineContainer{
-    margin: 8vw 20vw;
+    margin: 6vw 20vw;
     margin-bottom: 30vh;
-    z-index: 20;
     position: relative;
 }
 .circularText{
@@ -13,7 +12,7 @@
 .line{
     color:white;
     font-family: "Bahnschrift";
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 4vh;
     line-height: 3rem;
     text-align: justify;

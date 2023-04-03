@@ -30,6 +30,10 @@
 	align-items: center;
 	justify-content: center;
 	margin:5vw 2vw;
+	transition: transform 0.2s ease;
+}
+.goldTypeContainer:hover{
+	transform: scale(1.05);
 }
 
 .goldTypeContainer:not(:last-child) {
@@ -157,8 +161,11 @@
 	align-items: flex-start;
 	justify-content: center;
 	border-radius: 30px;
+	transition: transform 0.5s ease;
 }
-
+.hereButton:hover{
+	transform: scale(1.05);
+}
 .hereButton span {
 	font-size: 4rem;
 	color: #dcbe5b;
@@ -180,10 +187,18 @@
 	align-items: center;
 }
 
+
+.iconsContainer .iconContainer{
+	transition: transform 0.2s ease;
+}
+.iconsContainer .iconContainer:hover{
+		transform: scale(1.13);
+}
+
+	
 .iconsContainer .iconContainer:not(:last-child) {
 	margin-right: 1.5rem;
 }
-
 
 
 

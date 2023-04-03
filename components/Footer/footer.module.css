@@ -29,6 +29,7 @@
     text-decoration: inherit; /* no underline */
 }
 
+
 @media only screen and (max-width: 768px) {
     .copyRight{
         font-size: 0.75rem;

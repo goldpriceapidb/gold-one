@@ -69,6 +69,9 @@
     display:flex;
 }
 
+.navHeading:hover{
+    scale:105%
+}
 @media only screen and (max-width: 1380px) {
     .navRowStyle {
         width: 60vw;
