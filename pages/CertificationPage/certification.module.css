@@ -20,10 +20,41 @@
     text-align: center;
 }
 
+
+.popup {
+    position: fixed;
+    top: 10;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width:auto;
+  }
+  
+  .popup img {
+    margin-top: 15%;
+    max-height: 75%;
+    object-fit: contain;
+  }
+
+
 /* Media queries */
 @media only screen and (max-width: 768px) {
     .imageCaption{
         font-size: 1.5rem;
         margin-bottom: 5vh;
     }
+
+
+    .popup img {
+        margin-top: 15%;
+        max-width: 80%;
+        object-fit: contain;
+      }
+    
 }

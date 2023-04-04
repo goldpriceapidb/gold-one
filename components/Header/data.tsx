@@ -4,7 +4,7 @@ export default function Data(): JSX.Element {
 	return <></>
 }
 
-let headerContents: NavHeadingContent[] = [
+let headerContents: any[] = [
 	{
 		label: "HOME",
 		route: "/",

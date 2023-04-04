@@ -3,6 +3,7 @@ import { NavHeadingContent } from "../../types/NavHeadingType"
 import { headerContents } from "./data"
 import Link from "next/link"
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
 function Header(): JSX.Element {
 	return (
@@ -35,56 +36,50 @@ function NavHeading(props: NavHeadingContent): JSX.Element {
 }
 
 function LinkToHeading(props: NavHeadingContent): JSX.Element {
-	// const router = useRouter();
-	// let path = `${router.asPath}`;
-	// if (path == "/#our-products") {
-	// 	return (
-	// 		<Link href={props.route + ""} className={styles.navHeading}>
-	// 			<span>{props.label}</span>
-	// 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
-	// 		</Link>
-	// 	)
-	// }
-	// className={path == props.route ? styles.activeNavHeader : ''}
-	// console.log(path + " " + props.route);
+
+	let isActive = false;
+	if (typeof window !== 'undefined') {
+		isActive = window.location.pathname + window.location.hash === props.route;
+	}
 
 	return (
 		<Link href={props.route + ""} className={styles.navHeading}>
-			<span>{props.label}</span>
+			<span className={isActive ? styles.activeNavHeader : ""}>{props.label}</span>
 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
 		</Link>
 	)
 }
 
 function ScrollToHeading(props: NavHeadingContent): JSX.Element {
-	// const router = useRouter();
-	// const path = `${router.asPath}`;
-	// if (path != "/#our-products") {
-	// 	return (
-	// 		<a href={props.route} className={styles.navHeading} >
-	// 			<span >{props.label}</span>
-	// 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
-	// 		</a>
-	// 	)
-	// }
+	let isActive = false;
+	if (typeof window !== 'undefined') {
+		isActive = window.location.pathname + window.location.hash === props.route;
+	}
+
 	return (
 
-		<a href={props.route} className={styles.navHeading} >
-			<span>{props.label}</span>
+		<Link href={props.route + ""} className={styles.navHeading} >
+			<span className={isActive ? styles.activeNavHeader : ""}>{props.label}</span>
 			<span className={styles.hyphens}>&emsp;&emsp;&emsp;&emsp;</span>
-		</a>
+		</Link>
 	)
 }
 
 function Headings(): JSX.Element {
+
+	const NavHeadingNoSSR = dynamic(() => Promise.resolve(NavHeading), {
+		ssr: false
+	});
+	// The activePath parameter is not having any effect lol
 	return (
 		<div className={styles.navRowStyle}>
 			{headerContents.map((element: NavHeadingContent) => (
-				<NavHeading
+				<NavHeadingNoSSR
 					key={element.key}
 					label={element.label}
 					needToScroll={element?.needToScroll}
 					route={element.route}
+					activePath={useRouter().asPath}
 				/>
 			))}
 		</div>
