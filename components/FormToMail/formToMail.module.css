@@ -31,6 +31,10 @@
 	cursor: pointer;
 }
 
+.formSubmit:hover {
+	color: goldenrod;
+}
+
 /* Media queries */
 @media only screen and (max-width: 768px) {
 	.form {

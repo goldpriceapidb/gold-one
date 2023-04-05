@@ -3,4 +3,5 @@ export interface NavHeadingContent {
 	key: string
 	route?: string
 	needToScroll?: boolean
+	activePath: string
 }

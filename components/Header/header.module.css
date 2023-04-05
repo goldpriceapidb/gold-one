@@ -69,6 +69,14 @@
     display:flex;
 }
 
+.navHeading:hover{
+    scale:105%
+}
+
+.activeNavHeader{
+    color: goldenrod;
+}
+
 @media only screen and (max-width: 1380px) {
     .navRowStyle {
         width: 60vw;
