@@ -16,13 +16,12 @@ export default function GoldBarsContainer(): JSX.Element {
 					/>
 				)
 			})} */}
-			<img className={styles.barsImage} src="/img/bar-type1.png"></img>
-			<img className={styles.barsImage} src="/img/bar-type2.png"></img>
-			<img className={styles.barsImage} src="/img/bar-type3.png"></img>
-			<img className={styles.barsImage} src="/img/bar-type4.png"></img>
-			<img className={styles.barsImage} src="/img/bar-type5.png"></img>
-			<img className={styles.barsImage} src="/img/bar-type6.png"></img>
-
+			<img className={styles.barsImage} src="/img/bar-type1.png" alt="Bars Image" />
+			<img className={styles.barsImage} src="/img/bar-type2.png" alt="Bars Image" />
+			<img className={styles.barsImage} src="/img/bar-type3.png" alt="Bars Image" />
+			<img className={styles.barsImage} src="/img/bar-type4.png" alt="Bars Image" />
+			<img className={styles.barsImage} src="/img/bar-type5.png" alt="Bars Image" />
+			<img className={styles.barsImage} src="/img/bar-type6.png" alt="Bars Image" />
 		</div>
 	)
 }
