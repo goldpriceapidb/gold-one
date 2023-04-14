@@ -1,12 +1,15 @@
 .paraGrid {
-	margin: 10vh 15vw;
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-gap: 1vh 5vw;
+	margin: 10vh 5vw;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 1vh 2vw;
+	justify-content: center;
 }
 .paraContainer {
 	margin-top: 3rem;
 	font-family: "Bahnschrift";
+	max-width: 500px;
 }
 
 .paraTitle {
