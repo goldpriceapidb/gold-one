@@ -31,7 +31,7 @@ export default function GoldBarsContainer(): JSX.Element {
 		to: { opacity: inView ? 1 : 0, y: inView ? 0 : 50 },
 		from: { opacity: 0, y: 50 },
 		config: { tension: 200, friction: 20 },
-		delay: 200,
+		delay: 300,
 	});
 
 	return (
