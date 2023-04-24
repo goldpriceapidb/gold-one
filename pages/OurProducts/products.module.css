@@ -77,10 +77,13 @@
 
 .barsImage {
 	width: 100%;
-	transition: transform 0.2s ease;
 }
 
-.barsImage:hover{
+.barsImageHover{
+	transition: transform 0.5s ease;
+
+}
+.barsImageHover:hover{
 	transform: scale(1.05);
 }
 

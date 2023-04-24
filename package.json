@@ -14,6 +14,8 @@
 		"next": "latest",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-intersection-observer": "^9.4.3",
+		"react-spring": "^9.7.1",
 		"serve": "^14.0.1"
 	},
 	"devDependencies": {
