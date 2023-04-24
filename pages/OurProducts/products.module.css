@@ -80,6 +80,7 @@
 }
 
 .barsImageHover{
+	width: 100%;
 	transition: transform 0.5s ease;
 
 }
@@ -226,8 +227,12 @@
 	}
 	
 	.barsImage{
-		width: 16%;
+		width: 100%;
 	}
+	.barsImageHover{
+		width: 16%;	
+	}
+
 
 	.finalNotes {
 		width: 100%;
